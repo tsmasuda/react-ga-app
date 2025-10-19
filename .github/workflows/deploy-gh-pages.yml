@@ -30,12 +30,8 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: 22.14.0
-      - name: Install dependencies
-        run: npm install
-      - name: Build
+      - name: Install dependencies and build
         run: npm ci && npm run build
-        # env:
-        #   PUBLIC_URL: /react-ga-app
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v4
         with:
